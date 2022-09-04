@@ -12,7 +12,7 @@ import { ProductsListComponent } from './products/components/products-list/produ
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProductDetailsComponent } from './products/components/product-details/product-details.component';
-
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,8 @@ import { ProductDetailsComponent } from './products/components/product-details/p
     MatIconModule,
     RouterModule.forRoot([]),
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
