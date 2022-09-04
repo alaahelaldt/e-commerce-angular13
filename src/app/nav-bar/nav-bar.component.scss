@@ -1,0 +1,18 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background: firebrick;
+    color: white;
+    button {
+        background-color: unset;
+        outline: unset;
+        border: unset;
+        cursor: pointer;
+        .mat-icon {
+            color: #fff;
+        }
+        ;
+    }
+}
