@@ -39,10 +39,12 @@ and  when you click  "add to cart" button  --> new pop-up will show your orders 
 
 ## Technologies 
 
-Angular 13 
-Scss 
-Bootstrap
-flex layout library 
-snipCart librby 
-angular material 
+Angular 13 -
+Scss -
+Bootstrap-
+flex layout library -
+snipCart librby -
+angular material -
+
+
 
