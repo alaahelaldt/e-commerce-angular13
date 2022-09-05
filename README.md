@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## Project Description
+
+It's about a small e-commerce project which is containing from products page which is a page that show all the products available to start make orders from them. 
+
+then you can add it to card or view more about the product through the product details page ..
+
+and  when you click  "add to cart" button  --> new pop-up will show your orders and you can edit the quantity or delete the product. 
+
+
+## Technologies 
+
+Angular 13 
+Scss 
+Bootstrap
+flex layout library 
+snipCart librby 
+angular material 
+
