@@ -18,7 +18,7 @@ export class ProductDetailsComponent implements OnInit {
   getProduct(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.productService
-      .getProduct(id)
+      .getAllProduct(id)
       .subscribe((product) => (this.product = product)); // TODO refactor to getter
   }
   ngOnInit(): void {

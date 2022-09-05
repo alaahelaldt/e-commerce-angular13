@@ -1,7 +1,7 @@
 <div class="row">
 
 
-    <div class="col-md-4" *ngFor="let product of products">
+    <div class="col-lg-4 col-md-6" *ngFor="let product of products">
 
         <div class="wsk-cp-product">
             <div class="wsk-cp-img"><img [src]="product.ProductImg" alt="Product" class="img-responsive" /></div>
@@ -19,9 +19,12 @@
                 <div class="card-footer">
 
                     <div class="wcf-right">
-                        <a class="buy-btn">
-                            <mat-icon>shopping_cart</mat-icon>
-                        </a>
+
+                        <button mat-raised-button color="primary" class="snipcart-add-item add-to-cart btn btn-default" [attr.data-item-id]="product?.ProductId" [attr.data-item-price]="product?.ProductPrice" [attr.data-item-image]="product?.ProductImg" [attr.data-item-name]="product?.ProductName">
+                                Add
+                              </button>
+
+
                     </div>
                     <a [title]="product.ProductName + 'details'" [routerLink]="['product/', product.ProductId]" class="card-link">
                         Details
