@@ -33,3 +33,18 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.heighlited {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: yellow;
+}
+
+.strick {
+    text-decoration: line-through;
+    color: red;
+}
+
+.material-icons {
+    line-height: 1.4 !important;
+}

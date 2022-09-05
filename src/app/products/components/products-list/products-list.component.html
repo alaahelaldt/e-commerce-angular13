@@ -2,31 +2,34 @@
 
 
     <div class="col-md-4" *ngFor="let product of products">
-        <a [routerLink]="['/product', product.ProductId]">
-            <div class="wsk-cp-product">
-                <div class="wsk-cp-img"><img [src]="product.ProductImg" alt="Product" class="img-responsive" /></div>
-                <div class="wsk-cp-text">
-                    <div class="category">
-                        <span>{{product.ProductName}}</span>
-                    </div>
-                    <div class="description-prod">
-                        <p class="card-text">Available piece: {{product.AvailablePieces}}</p>
 
+        <div class="wsk-cp-product">
+            <div class="wsk-cp-img"><img [src]="product.ProductImg" alt="Product" class="img-responsive" /></div>
+            <div class="wsk-cp-text">
+                <div class="category">
+                    <span>{{product.ProductName}}</span>
+                </div>
+                <div class="description-prod">
+                    <p class="card-text">Available piece:
+                        <span [ngClass]="{heighlited: product.AvailablePieces == 1 || product.AvailablePieces == 2 || product.AvailablePieces == 3}">{{product.AvailablePieces}}</span>
+                    </p>
+                    <p class="strick" *ngIf="product.AvailablePieces == 0">Out Of Stock</p>
+                    <div class="wcf-left mt-3"><span class="price"> {{product.ProductPrice}} $</span></div>
+                </div>
+                <div class="card-footer">
+
+                    <div class="wcf-right">
+                        <a class="buy-btn">
+                            <mat-icon>shopping_cart</mat-icon>
+                        </a>
                     </div>
-                    <div class="card-footer">
-                        <div class="wcf-left"><span class="price"> {{product.ProductPrice}} $</span></div>
-                        <div class="wcf-right">
-                            <a class="buy-btn">
-                                <mat-icon>shopping_cart</mat-icon>
-                            </a>
-                        </div>
-                        <a [title]="product.ProductName + 'details'" [routerLink]="['product/', product.ProductId]" class="card-link">
+                    <a [title]="product.ProductName + 'details'" [routerLink]="['product/', product.ProductId]" class="card-link">
                         Details
                     </a>
-                    </div>
                 </div>
             </div>
-        </a>
+        </div>
+
     </div>
 
 </div>

@@ -2,45 +2,47 @@
     <mat-card class="product-page-card">
         <mat-card-title class="product-page-card-title" fxLayout="row" fxAlign="center">
             {{ product?.ProductName }}</mat-card-title>
-        <img mat-card-image [src]="product?.ProductImg" class="img-fluid" />
-        <!-- <mat-card-content fxLayout="column" fxLayoutAlign="space-around center">
-          <mat-form-field appearance="fill">
-            <mat-label>Size</mat-label>
-            <mat-select
-              (selectionChange)="
-                updateSelectedProductAttributes(
-                  this.selectedAttributes?.flavor,
-                  $event.value
-                )
-              "
-              required
-            >
-              <mat-option *ngFor="let size of product?.sizes" [value]="size">
-                {{ size }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <h4>Select your flavor:</h4>
-          <mat-chip-list aria-label="Flavors selection">
-            <mat-chip
-              *ngFor="let flavor of product?.flavors"
-              class="chip mat-elevation-6"
-              [style.background-color]="flavor.color"
-              (click)="
-                updateSelectedProductAttributes(
-                  flavor,
-                  this.selectedAttributes?.size
-                )
-              "
-            >
-              {{ flavor.name }}
-            </mat-chip>
-          </mat-chip-list>
-        </mat-card-content> -->
+        <mat-card-content fxLayout="column" fxLayoutAlign="space-around center">
+            <div class="container">
+                <div class="card">
+                    <div class="container-fliud">
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+
+                                <div class="preview-pic tab-content">
+                                    <div class="tab-pane active" id="pic-1"><img [src]="product?.ProductImg" /></div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="details col-md-6">
+                                <h3 class="product-title">{{ product?.ProductName }}</h3>
+                                <h4 class="price">Available Pieces: <span>{{ product?.AvailablePieces }}</span></h4>
+
+                                <div class="rating">
+                                    <div class="stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+
+                                </div>
+
+                                <h4 class="price">current price: <span>{{ product?.ProductPrice }}</span></h4>
+                                <button mat-raised-button color="primary" class="snipcart-add-item add-to-cart btn btn-default" [attr.data-item-id]="product?.ProductId" [attr.data-item-price]="product?.ProductPrice" [attr.data-item-image]="product?.ProductImg" [attr.data-item-name]="product?.ProductName">
+                                  Add to cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
         <mat-card-actions fxLayoutAlign="center">
-            <button mat-raised-button color="primary" class="snipcart-add-item" [attr.data-item-id]="product?.ProductId" [attr.data-item-price]="product?.ProductPrice" [attr.data-item-image]="product?.ProductImg" [attr.data-item-name]="product?.ProductName">
-            Add to cart
-          </button>
+
         </mat-card-actions>
     </mat-card>
 </div>
